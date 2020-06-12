@@ -1,0 +1,30 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+    pc=0
+    nc=0
+    zc=0
+    l=len(arr)
+    for i in range(l):
+        if arr[i]>0:
+            pc+=1
+        elif arr[i]<0:
+            nc+=1
+        elif arr[i]==0:
+            zc+=1
+    print(pc/l)
+    print(nc/l)
+    print(zc/l)
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
